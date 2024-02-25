@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
@@ -9,10 +8,11 @@
   <body>
     <div class="page-container">
       <header class="page-header" data-test="header">
-        <a class="navigation-logo" hrer="index.html" aria-current="page">
-          <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта города Седона">
-        </a>
         <nav class="navigation">
+          <a class="navigation-logo" hrer="index.html" aria-current="page">
+            <img class="page-header-logo" src="images/logo.svg" width="140" height="70"
+              alt="Логотип сайта города Седона">
+          </a>
           <ul class="navigation-list">
             <li class="navigation-item">
               <a class="navigation-link" href="index.html">Главная</a>
@@ -61,7 +61,7 @@
           <section class="catalog-products" data-test=" filter">
             <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group infrastructure">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
@@ -84,7 +84,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group housing-type">
                 <legend class="catalog-filter-title">Тип Жилья:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
@@ -107,7 +107,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group regulate-prices">
                 <legend class="catalog-filter-title">Стоимость, Р:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
@@ -241,7 +241,7 @@
           </form>
         </section>
       </main>
-      <footer class="page-footer" data-test="footer">
+      <footer class="page-footer-container page-footer" data-test="footer">
         <ul class="social-list">
           <li class="social-item">
             <a class="social-link" href="https://vk.com/htmlacademy">
@@ -267,4 +267,5 @@
       </footer>
     </div>
   </body>
+
 </html>
