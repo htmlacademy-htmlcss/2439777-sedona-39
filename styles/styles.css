@@ -653,6 +653,307 @@ body {
   fill: rgba(117, 97, 87, 0.3);
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+  display:none;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1;
+  width: 717px;
+  min-height: 576px;
+  box-sizing: border-box;
+  text-align: left;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 53px;
+  height: 53px;
+  font-family: inherit;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 1);
+  border: none;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  fill: rgba(0, 0, 0, 1);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus-visible,
+.modal-close-button:active {
+  background-color: rgba(229, 229, 229, 1);
+}
+
+.modal-close-button:focus-visible {
+  outline: 3px solid rgba(130, 179, 211, 1);
+}
+
+.modal-close-button:active .close-button {
+  fill: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom:64px;
+  padding-right:44px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 48px;
+}
+
+.modal-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modal-label-title {
+  max-width: 137px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.modal-input {
+  position: relative;
+  height: 48px;
+  margin-left: auto;
+  font-family: inherit;
+  background-color: rgba(242, 242, 242, 1);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-input:hover {
+  background-color: rgba(229, 229, 229, 1);
+}
+
+.modal-input:focus-visible {
+  background-color: rgba(229, 229, 229, 1);
+  outline: 3px solid rgba(130, 179, 211, 1);
+}
+
+.modal-input-date {
+  width: 440px;
+  padding: 12px 20px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/calendar.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.date-comment {
+  position: absolute;
+  top: 52px;
+  left: 137px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.comment-not-available {
+  color: rgba(255, 87, 87, 1);
+}
+
+.modal-guests {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.guests-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modal-input-guests {
+  width: 110px;
+  box-sizing: border-box;
+  padding: 14px 10px;
+  margin-left: 46px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  appearance: textfield;
+}
+
+.modal-input-guests::-webkit-outer-spin-button,
+.modal-input-guests::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.modal-quantity {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+  height: 48px;
+}
+
+.modal-quantity-button {
+  position: relative;
+  display: block;
+  height: 48px;
+  width: 40px;
+  padding: 0;
+  font-family: inherit;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-minus,
+.button-plus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.modal-quantity-button:hover .button-minus,
+.modal-quantity-button:hover .button-plus,
+.modal-quantity-button:focus-visible .button-minus,
+.modal-quantity-button:focus-visible .button-plus,
+.modal-quantity-button:active .button-minus,
+.modal-quantity-button:active .button-plus {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.modal-quantity-button:focus-visible .button-minus,
+.modal-quantity-button:focus-visible .button-plus {
+  outline: 3px solid rgba(130, 179, 211, 1);
+}
+
+.modal-quantity-button:active .button-minus,
+.modal-quantity-button:active .button-plus {
+  fill-opacity: 0.2;
+  outline: none;
+}
+
+.tooltip {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
+}
+
+.tooltip-toggle {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.tooltip-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+  width: 256px;
+  padding: 20px 18px 24px 22px;
+  box-sizing: border-box;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  line-height: 20px;
+  background-color: rgba(51, 51, 51, 1);
+  border-radius: 10px;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus-visible + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::before {
+  position: absolute;
+  top: -6px;
+  left: 121px;
+  transform: rotate(45deg);
+  z-index: 1;
+  width: 13px;
+  height: 13px;
+  background-color: inherit;
+  content: "";
+}
+
+.modal-form .button {
+  min-height: 60px;
+}
+
 .inner-nav {
   width: 1060px;
   margin-bottom: 40px;
@@ -1214,6 +1515,23 @@ body {
   color: #ffffff;
   background-color: #82b3d3;
   border-radius: 4px;
+}
+
+.pagination-link:hover,
+.pagination-link:focus-visible {
+  background-color: rgba(104, 162, 202, 1);
+  outline: none;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-current {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(242, 242, 242, 1);
+  pointer-events: none;
+  cursor: default;
 }
 
 .pagination-more {
